@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/eb6b112686.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -14,7 +15,7 @@
         <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
+                <span class='del fa-regular fa-trash-can'></span>
             </li>
         <% }) %>    
         </ul>

@@ -13,8 +13,9 @@ body {
     
 
 h1{
-    color: rgb(16, 135, 178);
+    color: #5b45ed;
     font-size: 5rem;
+    text-shadow: 5px 10px #8888882e;
 }
 
 h2 {
@@ -36,29 +37,44 @@ ul li span {
     margin-right: 2px;
 }
 
+input {
+    border: none;
+    box-shadow: 5px 5px #8888882e;
+}
 
 .container {
     margin: 0 auto;
     padding: 3rem;
-    width: 50%;
+    width: 35%;
     height: 75%;
     text-align: center;
-    background-color: khaki;
+    background-color: #CCF381;
     border-radius: 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 10px 10px #8888882e;
+}
+
+.container2 {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start
 }
 
 .completed{
     text-decoration: line-through;
-    color: rgb(179, 69, 10);
+    color: #4831D4;
 }
 .not{
-    
+    text-decoration: underline;
 }
 
 .form-container {
     margin-bottom: 5rem;
 }
+
