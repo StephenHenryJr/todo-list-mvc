@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     font-family: monospace;
@@ -8,14 +7,20 @@
 body {
     height: 100vh;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
-    
 
-h1{
+
+h1 {
     color: #5b45ed;
     font-size: 5rem;
     text-shadow: 5px 10px #8888882e;
+    text-shadow:
+        7px 7px rgba(255, 255, 255, 0.499),
+        18px 18px rgba(0, 0, 0, 0.05);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #5b45ed;
 }
 
 h2 {
@@ -53,8 +58,7 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    box-shadow: 10px 10px #8888882e;
+    align-items: center;    
 }
 
 .container2 {
@@ -66,15 +70,15 @@ input {
     align-items: flex-start
 }
 
-.completed{
+.completed {
     text-decoration: line-through;
     color: #4831D4;
 }
-.not{
+
+.not {
     text-decoration: underline;
 }
 
 .form-container {
     margin-bottom: 5rem;
 }
-
