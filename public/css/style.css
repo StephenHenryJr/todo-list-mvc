@@ -1,6 +1,7 @@
 * {
     margin: 0;
     font-size: 16px;
+    color: #353238;
 }
 
 html {
@@ -9,12 +10,17 @@ html {
 
 body {
     height: 100vh;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: rgb(238, 234, 228);
 }
 
 
 h1 {
     font-size: 5rem;
+    margin: 20px;
+    text-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
 
 h2 {
@@ -37,12 +43,11 @@ ul li {
 
 input {
     border: none;
-    border-radius: 2px;
-    box-shadow: 5px 5px #8888882e;
+    border-radius: 3px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05);
 }
 
 input:checked+p {
-    background: #F9F9F9;
     text-decoration: line-through;
   }
 
@@ -61,18 +66,30 @@ input:checked+p {
     border-left: 1px solid #D1E2FF;
   }
 
+  .container {
+    background: #e9bf28;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 10px;
+  }
 
 .list-container {
     max-width: 400px;
     margin: 50px auto;
     background: white;
     border-radius: 5px;
-    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 .form-container{
     max-width: 400px;
     margin: 0px auto;
+    /* position: absolute;
+    bottom: 100px;
+    right: 0;
+    left: 0; */
+
 }
 
 .completed {
@@ -82,3 +99,7 @@ input:checked+p {
 .checked {
     border: 1px sandybrown;
 }
+
+.todoItem:last-child {
+    border-bottom: 0;
+  }
