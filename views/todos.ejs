@@ -10,14 +10,21 @@
     <script src="https://kit.fontawesome.com/eb6b112686.js" crossorigin="anonymous"></script>
 </head>
 
-<body>'
+<body>
     <h1>ToDo's</h1>
 
-    <div class="container">
+    <div class="list-container">
         <ul>
             <% todos.forEach( el => { %>
             <li class="todoItem" data-id="<%=el._id%>">
-                <input type="checkbox">
+                <!-- Write a conditional to have the input checked or not
+                depending on if el.completed = true -->
+                <% if(el.completed === true) { %>
+                    <input type="checkbox" class="checked" checked>
+                <%} else { %>
+                    <input type="checkbox" class="unchecked">
+                <% } %>
+                <!-- <input type="checkbox"> -->
                 <p class="<%= el.completed === true ? 'completed' : 'not'%>"> <%= el.todo %> </p>
                 <span class='del fa-regular fa-trash-can'></span>
             </li>

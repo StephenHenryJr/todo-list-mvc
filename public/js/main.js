@@ -1,18 +1,30 @@
 const deleteBtn = document.querySelectorAll('.del')
-const todoItem = document.querySelectorAll('p.not')
+const todoIncomplete = document.querySelectorAll('p.not')
 const todoComplete = document.querySelectorAll('p.completed')
+const checkbox = document.querySelectorAll('input[type = "checkbox"].unchecked')
+const checkboxChecked = document.querySelectorAll('input[type = "checkbox"].checked')
+
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteTodo)
 })
 
-Array.from(todoItem).forEach((el)=>{
+Array.from(todoIncomplete).forEach((el)=>{
     el.addEventListener('click', markComplete)
 })
 
 Array.from(todoComplete).forEach((el)=>{
     el.addEventListener('click', markIncomplete)
 })
+
+Array.from(checkbox).forEach((el)=>{
+    el.addEventListener('click', markComplete)
+})
+
+Array.from(checkboxChecked).forEach((el)=>{
+    el.addEventListener('click', markIncomplete)
+})
+
 
 async function deleteTodo(){
     const todoId = this.parentNode.dataset.id
