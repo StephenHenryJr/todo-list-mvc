@@ -1,6 +1,6 @@
 const deleteBtn = document.querySelectorAll('.del')
-const todoIncomplete = document.querySelectorAll('p.not')
-const todoComplete = document.querySelectorAll('p.completed')
+// const todoIncomplete = document.querySelectorAll('p.not')
+// const todoComplete = document.querySelectorAll('p.completed')
 const checkbox = document.querySelectorAll('input[type = "checkbox"].unchecked')
 const checkboxChecked = document.querySelectorAll('input[type = "checkbox"].checked')
 
@@ -9,13 +9,13 @@ Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteTodo)
 })
 
-Array.from(todoIncomplete).forEach((el)=>{
-    el.addEventListener('click', markComplete)
-})
+// Array.from(todoIncomplete).forEach((el)=>{
+//     el.addEventListener('click', markComplete)
+// })
 
-Array.from(todoComplete).forEach((el)=>{
-    el.addEventListener('click', markIncomplete)
-})
+// Array.from(todoComplete).forEach((el)=>{
+//     el.addEventListener('click', markIncomplete)
+// })
 
 Array.from(checkbox).forEach((el)=>{
     el.addEventListener('click', markComplete)

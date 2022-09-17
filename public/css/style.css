@@ -38,10 +38,11 @@ ul li {
     font-size: 1rem;
     border-bottom: 1px solid #F1F1F1;
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 input {
+    padding: 10px;
     border: none;
     border-radius: 3px;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05);
@@ -94,12 +95,13 @@ input:checked+p {
 
 .completed {
     text-decoration: line-through;
-}
-
-.checked {
-    border: 1px sandybrown;
+    color: #0B5CC8;
 }
 
 .todoItem:last-child {
     border-bottom: 0;
+  }
+
+  .fa-trash-can {
+    color: rgb(171, 12, 12);
   }
