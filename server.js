@@ -12,6 +12,8 @@ require('dotenv').config({path: './config/.env'})
 //Calling our function that we required to connect to our DB
 connectDB()
 
+const PORT = process.env.PORT;
+
 // Telling server we're using EJS view engine
 app.set('view engine', 'ejs') 
 // Hosts all of our static files in our public folder
@@ -25,6 +27,6 @@ app.use('/', homeRoutes)
 app.use('/todos', todoRoutes)
 
 
-app.listen(process.env.PORT, ()=>{
+app.listen(PORT, ()=>{
     console.log(`Server is running, you better catch it!`)
 })    

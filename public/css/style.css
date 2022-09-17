@@ -1,26 +1,19 @@
 * {
     margin: 0;
-    font-family: monospace;
     font-size: 16px;
+}
+
+html {
+    font-family: sans-serif;
 }
 
 body {
     height: 100vh;
-    display: flex;
-    align-items: center;
 }
 
 
 h1 {
-    color: #5b45ed;
     font-size: 5rem;
-    text-shadow: 5px 10px #8888882e;
-    text-shadow:
-        7px 7px rgba(255, 255, 255, 0.499),
-        18px 18px rgba(0, 0, 0, 0.05);
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: #5b45ed;
 }
 
 h2 {
@@ -30,55 +23,56 @@ h2 {
 ul {
     padding: 0;
     text-align: left;
-    list-style: circle inside;
+    list-style: none;
 }
 
 ul li {
     margin: 0.5rem 0;
     font-size: 1rem;
-}
-
-ul li span {
-    margin-right: 2px;
+    border-bottom: 1px solid #F1F1F1;
+    display: flex;
+    align-items: center;
 }
 
 input {
     border: none;
+    border-radius: 2px;
     box-shadow: 5px 5px #8888882e;
 }
 
+input:checked+p {
+    background: #F9F9F9;
+    text-decoration: line-through;
+  }
+
+  input[type="checkbox"] {
+    margin: 20px;
+  }
+
+  p {
+    margin: 0;
+    padding: 20px;
+    transition: background 0.2s;
+    /* flex: 1; */
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+    border-left: 1px solid #D1E2FF;
+  }
+
+
 .container {
-    margin: 0 auto;
-    padding: 3rem;
-    width: 35%;
-    height: 75%;
-    text-align: center;
-    background-color: #CCF381;
-    border-radius: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;    
+    max-width: 400px;
+    margin: 50px 0;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.container2 {
-    margin: 0 auto;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start
+.form-container{
+    max-width: 400px;
 }
 
 .completed {
     text-decoration: line-through;
-    color: #4831D4;
-}
-
-.not {
-    text-decoration: underline;
-}
-
-.form-container {
-    margin-bottom: 5rem;
 }

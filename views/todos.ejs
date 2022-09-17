@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,28 +9,31 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/eb6b112686.js" crossorigin="anonymous"></script>
 </head>
-<body>
+
+<body>'
+    <h1>ToDo's</h1>
+
     <div class="container">
-        <h1>ToDos</h1>
         <ul>
-        <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+            <% todos.forEach( el => { %>
+            <li class="todoItem" data-id="<%=el._id%>">
+                <input type="checkbox">
+                <p class="<%= el.completed === true ? 'completed' : 'not'%>"> <%= el.todo %> </p>
                 <span class='del fa-regular fa-trash-can'></span>
             </li>
-        <% }) %>    
+            <% }) %>
         </ul>
-    
+    </div>
 
-        <div class="form-container">
-            <h2>Things left to do: <%= left %></h2>   
-            <form action="/todos/createTodo" method='POST'>
-                <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-                <input type="submit">
-            </form>
-        </div>
+    <div class="form-container">
+        <h2>Things left to do: <%= left %> </h2>
+        <form action="/todos/createTodo" method='POST'>
+            <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+            <input type="submit">
+        </form>
     </div>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
