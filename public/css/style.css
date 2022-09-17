@@ -10,6 +10,7 @@ html {
 
 body {
     height: 100vh;
+    padding: 10px;
     display: flex;
     align-items: center;
     background-color: rgb(238, 234, 228);
